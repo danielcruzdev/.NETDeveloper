@@ -108,3 +108,5 @@ C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.InitialModel.resources
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.GenerateResource.cache
+C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.CreateGigTable.resources
+C:\Users\dafc9\Documents\Programação\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsForGigsAndGenre.resources

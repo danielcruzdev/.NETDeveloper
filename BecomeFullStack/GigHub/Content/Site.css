@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 body {
-    padding-top: 50px;
+    padding-top: 90px;
     padding-bottom: 20px;
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
@@ -87,3 +87,50 @@ span.field-validation-error {
     font-weight: bold;
 }
 
+/* HOME PAGE STYLES*/
+
+.gigs {
+    list-style: none;
+}
+
+.gigs > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gigs > li .date {
+    background: red;
+    color: white;
+    text-align: center;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.gigs > li .date .month {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+.gigs > li .date .day {
+    background: #e8e8e8;
+    color: #333;
+    font-size: 20px;
+    padding: 6px 12px;
+}
+
+.gigs > li .details {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.gigs > li .details .artist {
+   font-weight: bold;
+   display: block;
+}
+
+.gigs > li .details .genre {
+    font-size: 15px
+}

@@ -27,6 +27,12 @@ textarea {
     max-width: 280px;
 }
 
+span.field-validation-error {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 /* Bootstrao Overrides*/
 .navbar-inverse {
     background-color: #d04212d1;

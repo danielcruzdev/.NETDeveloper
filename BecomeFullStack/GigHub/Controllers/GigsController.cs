@@ -9,18 +9,18 @@ namespace GigHub.Controllers
 {
     public class GigsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _dataBase;
 
         public GigsController()
         {
-            _context = new ApplicationDbContext();
+            _dataBase = new ApplicationDbContext();
         }
 
         [Authorize]
         public ActionResult Attending()
         {
             var userId = User.Identity.GetUserId();
-            var gigs = _context.Attendances
+            var gigs = _dataBase.Attendances
                 .Where(a => a.AttendeeId == userId)
                 .Select(a => a.Gig)
                 .Include(g => g.Artist)
@@ -42,7 +42,7 @@ namespace GigHub.Controllers
         {
             var viewModel = new GigViewModel
             {
-                Genres = _context.Genres.ToList()
+                Genres = _dataBase.Genres.ToList()
             };
 
             return View(viewModel);
@@ -55,7 +55,7 @@ namespace GigHub.Controllers
         {
             if (!ModelState.IsValid)
             {
-                viewModel.Genres = _context.Genres.ToList();
+                viewModel.Genres = _dataBase.Genres.ToList();
                 return View("Create", viewModel);
             }
 
@@ -68,8 +68,8 @@ namespace GigHub.Controllers
                 Venue = viewModel.Venue
             };
 
-            _context.Gigs.Add(gig);
-            _context.SaveChanges();
+            _dataBase.Gigs.Add(gig);
+            _dataBase.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }

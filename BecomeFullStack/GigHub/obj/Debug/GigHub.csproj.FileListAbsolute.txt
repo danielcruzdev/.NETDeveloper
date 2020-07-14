@@ -357,3 +357,4 @@ C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullSta
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.dll
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
+C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache

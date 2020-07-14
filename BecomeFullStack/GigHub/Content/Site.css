@@ -92,6 +92,10 @@ span.field-validation-error {
     -webkit-box-shadow: none;
 }
 
+select.form-control {
+    padding: 5px;
+}
+
 .btn {
     /*font-size: 17px;
     padding: 6px 25px;*/

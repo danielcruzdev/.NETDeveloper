@@ -16,6 +16,7 @@ namespace GigHub.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
         // GET: Home
         public ActionResult Index()
         {

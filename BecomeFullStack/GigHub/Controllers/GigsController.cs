@@ -37,7 +37,6 @@ namespace GigHub.Controllers
             return View("Gigs", viewModel);
         }
 
-
         [Authorize]
         public ActionResult Create()
         {
@@ -45,6 +44,7 @@ namespace GigHub.Controllers
             {
                 Genres = _context.Genres.ToList()
             };
+
             return View(viewModel);
         }
 
@@ -58,6 +58,7 @@ namespace GigHub.Controllers
                 viewModel.Genres = _context.Genres.ToList();
                 return View("Create", viewModel);
             }
+
 
             var gig = new Gig
             {

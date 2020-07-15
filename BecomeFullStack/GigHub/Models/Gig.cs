@@ -49,6 +49,22 @@ namespace GigHub.Models
             }
         }
 
+        public void Update()
+        {
+            IsCanceled = true;
+
+            var notification = new Notification(NotificationType.GigCanceled, this);
+
+            var attendees = Attendances.Select(a => a.Attendee);
+
+            foreach (var attendee in attendees)
+            {
+                attendee.Notify(notification);
+            }
+        }
+
+
+
         public void Open()
         {
             IsCanceled = false;

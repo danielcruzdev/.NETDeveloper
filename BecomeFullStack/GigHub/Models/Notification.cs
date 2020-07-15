@@ -20,6 +20,16 @@ namespace GigHub.Models
             DateTime = DateTime.Now;
         }
 
+        public Notification(NotificationType type, Gig gig, DateTime dateTime)
+        {
+            Type = type;
+            Gig = gig ?? throw new ArgumentNullException("Null gig");
+            DateTime = dateTime;
+            OriginalDateTime = DateTime.Now;
+        }
+
+
+
         public int Id { get; private set; }
 
         public DateTime DateTime { get; private set; }

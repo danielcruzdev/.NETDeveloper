@@ -1,10 +1,7 @@
 ﻿using GigHub.Models;
 using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Data.Entity;
 using System.Web.Http;
 
 namespace GigHub.Api
@@ -22,47 +19,14 @@ namespace GigHub.Api
         public IHttpActionResult Cancel(int id)
         {
             var userId = User.Identity.GetUserId();
-            var gig = _database.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
-
-            gig.IsCanceled = true;
-
-            var notification = new Notification
-            {
-                DateTime = DateTime.Now,
-                Gig = gig,
-                Type = NotificationType.GigCanceled
-            };
-
-            var attendees = _database.Attendances
-                .Where(a => a.GigId == gig.Id)
-                .Select(a => a.Attendee)
-                .ToList();
-
-            foreach(var attendee in attendees)
-            {
-                var userNotification = new UserNotification
-                {
-                    User = attendee,
-                    Notification = notification
-                };
-
-                _database.UserNotifications.Add(userNotification);
-            }
-
-            _database.SaveChanges();
-
-            return Ok();
-        }
-
-        [HttpPost]
-        public IHttpActionResult Create(int id)
-        {
-            var userId = User.Identity.GetUserId();
-            var gig = _database.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
+            var gig = _database.Gigs
+                .Include(g => g.Attendances.Select(a => a.Attendee))
+                .Single(g => g.Id == id && g.ArtistId == userId);
 
             if (gig.IsCanceled) return NotFound();
 
-            gig.IsCanceled = false;
+            gig.Cancel();
+
             _database.SaveChanges();
 
             return Ok();

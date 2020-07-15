@@ -30,18 +30,6 @@ namespace GigHub.Controllers
         }
 
         [Authorize]
-        public ActionResult MineCanceledGigs()
-        {
-            var userId = User.Identity.GetUserId();
-            var gigs = _dataBase.Gigs
-                .Where(g => g.ArtistId == userId && g.IsCanceled == true)
-                .Include(g => g.Genre)
-                .ToList();
-
-            return View(gigs);
-        }
-
-        [Authorize]
         public ActionResult Attending()
         {
             var userId = User.Identity.GetUserId();

@@ -120,3 +120,5 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledTogig.resources

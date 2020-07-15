@@ -171,6 +171,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\GigsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -179,11 +180,15 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FolloweesController.cs" />
-    <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Api\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Migrations\202007151437498_AddIsCanceledTogig.cs" />
+    <Compile Include="Migrations\202007151437498_AddIsCanceledTogig.Designer.cs">
+      <DependentUpon>202007151437498_AddIsCanceledTogig.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
-    <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Api\AttendancesController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Dtos\FollowingDto.cs" />
@@ -340,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007131842520_AddFollowing.resx">
       <DependentUpon>202007131842520_AddFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007151437498_AddIsCanceledTogig.resx">
+      <DependentUpon>202007151437498_AddIsCanceledTogig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

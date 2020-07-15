@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<GigHub.Models.Gig>
 
 @{
-    ViewBag.Title = "Mine";
+    ViewBag.Title = "My canceled Gigs";
 }
 
-<h2>My Upcoming Gigs</h2>
+<h2>My Canceled Gigs</h2>
 <ul class="gigs voffset3">
     @foreach (var gig in Model)
     {
@@ -28,24 +28,24 @@
                     <a href="@Url.Action("Edit", "Gigs", new { id = gig.Id })">
                         Edit
                     </a> |
-                    <a href="#" class="js-cancel-gig" data-gig-id="@gig.Id">
-                        Cancel
+                    <a href="#" class="js-create-gig" data-gig-id="@gig.Id">
+                        Create
                     </a>
                 </div>
             </div>
         </li>
     }
-</ul>   
+</ul>
 
 @section scripts {
     <script>
         $(document).ready(function () {
-            $(".js-cancel-gig").click(function (e) {
+            $(".js-create-gig").click(function (e) {
                 var link = $(e.target)
                 var gigId = link.attr("data-gig-id")
                 bootbox.dialog({
                     title: 'Confirm',
-                    message: "<p>Are you sure you want to cancel this gig?</p>",
+                    message: "<p>Are you sure you want to open this gig?</p>",
                     size: 'medium',
                     buttons: {
                         no: {
@@ -57,11 +57,11 @@
                         },
                         yes: {
                             label: "Yes",
-                            className: 'btn-danger',
+                            className: 'btn-primary',
                             callback: function () {
                                 $.ajax({
                                     url: "/api/gigs/" + gigId,
-                                    method: "DELETE",
+                                    method: "POST",
                                 })
                                     .done(function () {
                                         link.parents("li").fadeOut(function () {
@@ -77,5 +77,6 @@
                 });
             });
         })
-    </script>    
+    </script>
 }
+

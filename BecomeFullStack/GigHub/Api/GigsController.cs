@@ -12,7 +12,7 @@ namespace GigHub.Api
     [Authorize]
     public class GigsController : ApiController
     {
-        private ApplicationDbContext _database;
+        private readonly ApplicationDbContext _database;
         public GigsController()
         {
             _database = new ApplicationDbContext();
@@ -23,7 +23,46 @@ namespace GigHub.Api
         {
             var userId = User.Identity.GetUserId();
             var gig = _database.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
+
             gig.IsCanceled = true;
+
+            var notification = new Notification
+            {
+                DateTime = DateTime.Now,
+                Gig = gig,
+                Type = NotificationType.GigCanceled
+            };
+
+            var attendees = _database.Attendances
+                .Where(a => a.GigId == gig.Id)
+                .Select(a => a.Attendee)
+                .ToList();
+
+            foreach(var attendee in attendees)
+            {
+                var userNotification = new UserNotification
+                {
+                    User = attendee,
+                    Notification = notification
+                };
+
+                _database.UserNotifications.Add(userNotification);
+            }
+
+            _database.SaveChanges();
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public IHttpActionResult Create(int id)
+        {
+            var userId = User.Identity.GetUserId();
+            var gig = _database.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
+
+            if (gig.IsCanceled) return NotFound();
+
+            gig.IsCanceled = false;
             _database.SaveChanges();
 
             return Ok();

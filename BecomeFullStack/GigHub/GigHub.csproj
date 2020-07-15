@@ -186,6 +186,13 @@
     <Compile Include="Migrations\202007151437498_AddIsCanceledTogig.Designer.cs">
       <DependentUpon>202007151437498_AddIsCanceledTogig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007151706337_AddNotification.cs" />
+    <Compile Include="Migrations\202007151706337_AddNotification.Designer.cs">
+      <DependentUpon>202007151706337_AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\UserNotification.cs" />
     <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
     <Compile Include="Api\AttendancesController.cs" />
@@ -304,6 +311,7 @@
     <Content Include="Views\Gigs\GigForm.cshtml" />
     <Content Include="Views\Followees\Index.cshtml" />
     <Content Include="Views\Gigs\Mine.cshtml" />
+    <Content Include="Views\Gigs\MineCanceledGigs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007151437498_AddIsCanceledTogig.resx">
       <DependentUpon>202007151437498_AddIsCanceledTogig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007151706337_AddNotification.resx">
+      <DependentUpon>202007151706337_AddNotification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

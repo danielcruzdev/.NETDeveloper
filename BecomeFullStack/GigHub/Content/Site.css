@@ -76,6 +76,19 @@ span.field-validation-error {
     background-color: rgb(197, 99, 66);
 }
 
+/* NOTIFICATIONS */
+
+.navbar-inverse .notifications {
+    position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -2px;
+    background: #a80a0a
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -179,3 +192,4 @@ span.field-validation-error {
 .gigs > li:hover .actions {
     display:block
 }
+

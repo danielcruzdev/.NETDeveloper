@@ -122,3 +122,6 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledTogig.resources
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.ChangeValueToVanue.resources
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.xml

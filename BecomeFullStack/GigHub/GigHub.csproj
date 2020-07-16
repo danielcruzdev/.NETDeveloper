@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -172,9 +175,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\GigsController.cs" />
+    <Compile Include="Api\NotificationsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -182,6 +187,10 @@
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Api\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\GigDto.cs" />
+    <Compile Include="Dtos\NotificationDto.cs" />
+    <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="Migrations\202007151437498_AddIsCanceledTogig.cs" />
     <Compile Include="Migrations\202007151437498_AddIsCanceledTogig.Designer.cs">
       <DependentUpon>202007151437498_AddIsCanceledTogig.cs</DependentUpon>
@@ -189,6 +198,10 @@
     <Compile Include="Migrations\202007151706337_AddNotification.cs" />
     <Compile Include="Migrations\202007151706337_AddNotification.Designer.cs">
       <DependentUpon>202007151706337_AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007161237550_ChangeValueToVanue.cs" />
+    <Compile Include="Migrations\202007161237550_ChangeValueToVanue.Designer.cs">
+      <DependentUpon>202007161237550_ChangeValueToVanue.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\NotificationType.cs" />
@@ -358,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007151706337_AddNotification.resx">
       <DependentUpon>202007151706337_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007161237550_ChangeValueToVanue.resx">
+      <DependentUpon>202007161237550_ChangeValueToVanue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

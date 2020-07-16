@@ -15,6 +15,11 @@ namespace GigHub.Models
             Notification = notification ?? throw new ArgumentNullException("Null notification!");
         }
 
+        public void Read()
+        {
+            IsRead = true;
+        }
+
         protected UserNotification()
         {
 
@@ -32,6 +37,6 @@ namespace GigHub.Models
 
         public Notification Notification { get; private set; }
 
-        public bool IsRead { get; set; }
+        public bool IsRead { get; private set; }
     }
 }

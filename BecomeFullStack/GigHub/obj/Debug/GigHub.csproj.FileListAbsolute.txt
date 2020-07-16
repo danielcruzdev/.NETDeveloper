@@ -51,6 +51,7 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\roslyn\VBCSCompiler.exe
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Antlr3.Runtime.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\EntityFramework.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\EntityFramework.SqlServer.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Microsoft.AspNet.Identity.Core.dll
@@ -80,6 +81,7 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.Razor.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\WebGrease.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Net.Http.Formatting.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Http.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Http.WebHost.xml
@@ -115,14 +117,11 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddNameToApplicationUser.resources
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddAttendance.resources
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledTogig.resources
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.ChangeValueToVanue.resources
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.GenerateResource.cache
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CoreCompileInputs.cache
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledTogig.resources
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.Migrations.ChangeValueToVanue.resources
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.dll
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.xml
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache

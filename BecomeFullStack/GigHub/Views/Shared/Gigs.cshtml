@@ -4,6 +4,13 @@
     ViewBag.Title = "Home Page";
 }
 <h1>@Model.Heading</h1>
+@using (Html.BeginForm("Seach", "Gigs"))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Search" />
+}
 <ul class="gigs voffset3">
     @foreach (var gig in Model.UpcomingGigs)
     {
@@ -35,10 +42,10 @@
                 <span class="genre">
                     @gig.Genre.Name
                 </span>
-                    @if (Model.ShowActions && gig.IsCanceled == false)
-                    {
-                        <button data-gig-id="@gig.Id" class="btn btn-defaul btn-sm pull-right js-toggle-attendance">Going?</button>
-                    }
+                @if (Model.ShowActions && gig.IsCanceled == false)
+                {
+                    <button data-gig-id="@gig.Id" class="btn btn-defaul btn-sm pull-right js-toggle-attendance">Going?</button>
+                }
                 <span class="venue">
                     @gig.Venue
                 </span>

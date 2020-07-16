@@ -76,6 +76,12 @@ span.field-validation-error {
     background-color: rgb(197, 99, 66);
 }
 
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-family: 'Nunito', sans-serif;
+}
+
 /* NOTIFICATIONS */
 
 .navbar-inverse .notifications {
@@ -89,6 +95,26 @@ span.field-validation-error {
     background: #a80a0a
 }
 
+ul.notifications {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.notifications > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0
+}
+
+ul.notifications > li:last-child {
+    border: none
+}
+
+ul.notifications .highlight {
+    font-weight: bold;
+}
+
+
+/* GROUP*/
 .form-group {
     margin-bottom: 20px;
 }

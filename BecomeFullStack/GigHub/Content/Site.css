@@ -82,10 +82,19 @@ span.field-validation-error {
     font-family: 'Nunito', sans-serif;
 }
 
+a:hover, a:focus {
+    text-decoration: none;
+}
+
 /* Search form */
 
-#searchGigs {
-    width: 300px;
+.home-form-group {
+    width: 400px
+}
+
+input#SearchTerm.form-control{
+    width: 400px;
+    max-width: 500px
 }
 
 /* NOTIFICATIONS */

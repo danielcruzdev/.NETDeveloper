@@ -6,9 +6,9 @@
 <h1>@Model.Heading</h1>
 @using (Html.BeginForm("Search", "Gigs"))
 {
-    <div class="form-group">
+    <div class="form-group home-form-group">
         <div id="searchGigs" class="input-group">
-            @Html.TextBoxFor(m => m.SearchTerm, new { placeholder = "Search by artist, genre...", @class = "form-control" })
+            @Html.TextBoxFor(m => m.SearchTerm, new { placeholder = "Search by Artist, Genre or Location", @class = "form-control" })
             <span class="input-group-addon">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
@@ -32,7 +32,7 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Artist.Name
+                    <a href="@Url.Action("Details", "Gigs", new { id = gig.Id })">@gig.Artist.Name</a>
 
                     @if (gig.IsCanceled)
                     {
@@ -51,10 +51,14 @@
                 </span>
                 @if (Model.ShowActions && gig.IsCanceled == false)
                 {
-                    <button data-gig-id="@gig.Id" class="btn btn-defaul btn-sm pull-right js-toggle-attendance">Going?</button>
+                    <button 
+                            data-gig-id="@gig.Id" 
+                            class="btn @(Model.Attendances.Contains(gig.Id) ? "btn-info" : "btn-default")
+                            btn-sm pull-right js-toggle-attendance">
+                            Going?</button>
                 }
                 <span class="venue">
-                    @gig.Venue
+                    @gig.Venue          
                 </span>
             </div>
         </li>
@@ -64,19 +68,7 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            $(".js-toggle-attendance").click(function (e) {
-                var button = $(e.target)
-                $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
-                    .done(function () {
-                        button
-                            .removeClass("btn-default")
-                            .addClass("btn-info")
-                            .text("Going")
-                    })
-                    .fail(function () {
-                        alert("Something failed!")
-                    })
-            });
+            GigsController.init();
 
             $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target)

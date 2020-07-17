@@ -1,14 +1,14 @@
 ﻿var GigsController = function (attendanceService) {
     var button;
 
-    var init = function () {
-        $(".js-toggle-attendance").click(toggleAttendance);
+    var init = function (container) {
+        $(container).on("click", ".js-toggle-attendance", toggleAttendance)
     };
 
 
     const done = (button) => {
         var text = (button.text() == "Going") ? "Going?" : "Going"
-        button.toggeClass("btn-info").toggeClass("btn-default").text(text);
+        button.toggleClass("btn-info").toggleClass("btn-default").text(text);
     }
 
     const fail = () => {
@@ -23,8 +23,7 @@
             attendanceService.createAttendance(gigId, done, fail)
 
         else 
-            attendanceService.deleteAttendance(gigId, done, fail)
-        
+            attendanceService.deleteAttendance(gigId, done, fail)   
     }
 
     return {

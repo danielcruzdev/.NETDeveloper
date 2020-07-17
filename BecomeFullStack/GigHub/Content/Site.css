@@ -150,10 +150,6 @@ ul.notifications {
     border-radius: 7px;
 }
 
-.js-toggle-attendance {
-    margin-top: -15px;
-}
-
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     color: #fff;
     background-color: rgb(197, 99, 66);
@@ -216,13 +212,10 @@ ul.notifications {
 
             .gigs > li .details .genre {
                 display: block;
-                font-size: 15px;
+                font-size: 14px;
+                margin-bottom: 4px
             }
 
-            .gigs > li .details .venue {
-                font-size: 12px;
-                display: block;
-            }
         /* Links EDIT and DELETE*/
 
         .gigs > li .actions {

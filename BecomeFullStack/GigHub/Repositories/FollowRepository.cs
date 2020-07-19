@@ -26,12 +26,11 @@ namespace GigHub.Repositories
         }
 
 
-        public bool IsFollowing(string userId, int id)
+        public bool IsFollowing(string userId, string ArtistId)
         {
-            var gig = _gigRepository.GetGigDetails(id);
 
             return _dataBase.Followings
-                    .Any(f => f.FolloweeId == gig.ArtistId && f.FollowerId == userId);
+                    .Any(f => f.FolloweeId == ArtistId && f.FollowerId == userId);
         }
     }
 }

@@ -26,12 +26,11 @@ namespace GigHub.Repositories
                             .ToList();
         }
 
-        public bool IsAttending(string userId, int id)
+        public bool IsAttending(string userId, int gigid)
         {
-            var gig = _gigRepository.GetGigDetails(id);
 
             return _dataBase.Attendances
-                    .Any(a => a.GigId == gig.Id && a.AttendeeId == userId);
+                    .Any(a => a.GigId == gigid && a.AttendeeId == userId);
         }
     }
 }

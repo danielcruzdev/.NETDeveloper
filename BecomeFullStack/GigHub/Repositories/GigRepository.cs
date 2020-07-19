@@ -47,9 +47,12 @@ namespace GigHub.Repositories
                  .ToList();
         }
 
-        public Gig GetGigForEdit(string ArtistId, int gigId)
+        public Gig GetGigForEdit(int gigId)
         {
-            return _dataBase.Gigs.Single(g => g.Id == gigId && g.ArtistId == ArtistId);
+            return _dataBase.Gigs
+                .Include(g => g.Artist)
+                .Include(g => g.Genre)
+                .SingleOrDefault(g => g.Id == gigId);
         }
 
         public Gig GetGigDetails(int id)

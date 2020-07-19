@@ -93,8 +93,11 @@ namespace GigHub.Controllers
         [Authorize]
         public ActionResult Edit(int id)
         {
-            var userId = User.Identity.GetUserId();
-            var gig = _gigRepository.GetGigForEdit(userId, id);
+            var gig = _gigRepository.GetGigForEdit(id);
+
+            if (gig == null) return HttpNotFound();
+            if (gig.ArtistId != User.Identity.GetUserId()) return new HttpUnauthorizedResult();
+
             var genres = _genreRepository.GetAllGenres();
 
             var viewModel = new GigViewModel
@@ -158,9 +161,9 @@ namespace GigHub.Controllers
             {
                 var userId = User.Identity.GetUserId();
 
-                viewModel.IsAttending = _attendanceRepository.IsAttending(userId, id);
+                viewModel.IsAttending = _attendanceRepository.IsAttending(userId, gig.Id);
 
-                viewModel.IsFollowing = _followRepository.IsFollowing(userId, id);
+                viewModel.IsFollowing = _followRepository.IsFollowing(userId, gig.ArtistId);
             }
 
             return View("Details", viewModel);

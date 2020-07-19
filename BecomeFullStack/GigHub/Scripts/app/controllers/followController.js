@@ -5,9 +5,9 @@
         $(".js-toggle-follow").click(toggleFollow)
     }
 
-    var done = (button) => {
+    var done = () => {
         var text = (button.text() == "Follow") ? "Following" : "Follow"
-        button.toggleClass("btn-info").toggleClass("btn-defaul").text(text);
+        button.toggleClass("btn-info").toggleClass("btn-default").text(text);
     }
 
     var fail = () => {

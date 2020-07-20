@@ -24,19 +24,15 @@ namespace GigHub.Api
             var userId = User.Identity.GetUserId();
             var gig = _unitOfWork.Gigs.GetGigWithAttendees(id);
 
-            if (gig.ArtistId == userId)
-            {
-                if (gig.IsCanceled) return NotFound();
+            if (gig == null || gig.IsCanceled) return NotFound();
 
-                gig.Cancel();
+            if (gig.ArtistId != userId) return Unauthorized();
 
-                _unitOfWork.Complete();
+            gig.Cancel();
 
-                return Ok();
-            }
-            else
-                return BadRequest("Artist Unauthorized!");
+            _unitOfWork.Complete();
 
+            return Ok();
         }
     }
 }

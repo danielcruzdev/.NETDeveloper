@@ -1,25 +1,25 @@
-﻿using System;
+﻿using GigHub.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using System.Web.Services.Description;
 
 namespace GigHub.Models
 {
-    public class Attendance
+    public class Following
     {
-        public Gig Gig { get; set; }
-
-        public ApplicationUser Attendee { get; set; }
-
         [Key]
         [Column(Order = 1)]
-        public int GigId { get; set; }
+        public string FollowerId { get; set; }
 
         [Key]
         [Column(Order = 2)]
-        public string AttendeeId { get; set; }
+        public string FolloweeId { get; set; }
+
+        public ApplicationUser Follower { get; set; }
+        public ApplicationUser Followee { get; set; }
+
     }
 }

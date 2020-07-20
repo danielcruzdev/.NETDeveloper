@@ -125,6 +125,7 @@ C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullSta
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.dll
 C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
+C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\GigHub.dll.config
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\GigHub.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\GigHub.pdb
@@ -179,6 +180,7 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Antlr3.Runtime.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Castle.Core.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\EntityFramework.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\EntityFramework.SqlServer.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Microsoft.AspNet.Identity.Core.dll
@@ -196,6 +198,12 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Newtonsoft.Json.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Extensions.Conventions.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Extensions.Factory.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.Common.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.Mvc.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.WebApi.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Owin.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Net.Http.Formatting.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Helpers.dll
@@ -207,13 +215,21 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.Deployment.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.Razor.dll
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\WebActivatorEx.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\WebGrease.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\AutoMapper.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Castle.Core.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Extensions.Conventions.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Extensions.Factory.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.Common.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.Mvc.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\Ninject.Web.WebApi.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Net.Http.Formatting.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Http.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Http.WebHost.xml
-C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Helpers.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Mvc.xml
+C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Helpers.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Optimization.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.Razor.xml
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\bin\System.Web.WebPages.xml
@@ -252,4 +268,3 @@ C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStac
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.dll
 C:\Users\daniel.cruz\Documents\Cursos\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.pdb
-C:\Users\dafc9\Documents\Programação\.NETDeveloper\.NETDeveloper\BecomeFullStack\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache

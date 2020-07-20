@@ -1,13 +1,17 @@
-﻿using GigHub.Models;
+﻿using GigHub.Interfaces;
+using GigHub.Models;
+using GigHub.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace GigHub.Repositories
 {
-    public class FollowRepository
+    public class FollowRepository : IFollowRepository
     {
         private readonly ApplicationDbContext _dataBase;
+        #pragma warning disable IDE0052 // Remove unread private members
         private readonly GigRepository _gigRepository;
+        #pragma warning restore IDE0052 // Remove unread private members
 
 
         public FollowRepository(ApplicationDbContext database)

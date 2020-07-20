@@ -10,6 +10,7 @@ namespace GigHub.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            MigrationsDirectory = @"Persistence\Migrations";
         }
 
         protected override void Seed(GigHub.Models.ApplicationDbContext context)

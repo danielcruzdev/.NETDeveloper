@@ -1,4 +1,5 @@
-﻿using GigHub.Models;
+﻿using GigHub.Interfaces;
+using GigHub.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +7,7 @@ using System.Linq;
 
 namespace GigHub.Repositories
 {
-    public class GigRepository
+    public class GigRepository : IGigRepository
     {
         private readonly ApplicationDbContext _dataBase;
         public GigRepository(ApplicationDbContext database)
@@ -61,6 +62,11 @@ namespace GigHub.Repositories
                         .Include(g => g.Artist)
                         .Include(g => g.Genre)
                         .SingleOrDefault(g => g.Id == id);
+        }
+
+        public void Add(Gig gig)
+        {
+            _dataBase.Gigs.Add(gig);
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GigHub.ViewModels;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace GigHub.Models
 {

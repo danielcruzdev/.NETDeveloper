@@ -8,6 +8,7 @@ namespace GigHub.Interfaces
         IFollowRepository Follow { get; }
         IGenreRepository Genre { get; }
         IGigRepository Gigs { get; }
+        INotificationRepository Notification { get; }
         void Complete();
     }
 }

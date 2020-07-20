@@ -11,6 +11,7 @@ namespace GigHub.Persistence
         public IAttendanceRepository Attendance { get; private set; }
         public IGenreRepository Genre { get; private set; }
         public IFollowRepository Follow { get; private set; }
+        public INotificationRepository Notification { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -19,6 +20,7 @@ namespace GigHub.Persistence
             Attendance = new AttendanceRepository(context);
             Genre = new GenreRepository(context);
             Follow = new FollowRepository(context);
+            Notification = new NotificationRepository(context);
         }
 
         public void Complete()

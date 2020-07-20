@@ -211,6 +211,10 @@
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Api\FollowingsController.cs" />
     <Compile Include="Core\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Persistence\EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\GigConfiguration.cs" />
+    <Compile Include="Core\Interfaces\INotificationRepository.cs" />
+    <Compile Include="Persistence\Repositories\NotificationRepository.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Persistence\Repositories\AttendanceRepository.cs" />
     <Compile Include="Persistence\Repositories\FollowRepository.cs" />

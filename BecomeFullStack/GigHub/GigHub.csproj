@@ -211,10 +211,15 @@
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Api\FollowingsController.cs" />
     <Compile Include="Core\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ApplicationUserConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\AttendanceConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\FollowingConfiguration.cs" />
     <Compile Include="Persistence\EntityConfigurations\GenreConfiguration.cs" />
     <Compile Include="Persistence\EntityConfigurations\GigConfiguration.cs" />
     <Compile Include="Core\Interfaces\INotificationRepository.cs" />
     <Compile Include="Core\Interfaces\IApplicationDbContext.cs" />
+    <Compile Include="Persistence\EntityConfigurations\NotificationConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\UserNotificationConfiguration.cs" />
     <Compile Include="Persistence\Repositories\NotificationRepository.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Persistence\Repositories\AttendanceRepository.cs" />
@@ -295,7 +300,7 @@
     <Compile Include="Core\Models\ForgotViewModel.cs" />
     <Compile Include="Core\Models\Genre.cs" />
     <Compile Include="Core\Models\Gig.cs" />
-    <Compile Include="Core\ViewModels\ApplicationUser.cs" />
+    <Compile Include="Core\Models\ApplicationUser.cs" />
     <Compile Include="Core\ViewModels\ManageViewModels.cs" />
     <Compile Include="Core\ViewModels\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

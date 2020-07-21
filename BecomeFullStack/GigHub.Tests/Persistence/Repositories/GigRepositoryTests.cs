@@ -6,6 +6,7 @@ using GigHub.Tests.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace GigHub.Tests.Persistence.Repositories
@@ -34,7 +35,7 @@ namespace GigHub.Tests.Persistence.Repositories
         public void GetUpComingGigsByArtist_GigIsInThePast_ShouldNotBeReturned()
         {
             var gig = new Gig() { DateTime = DateTime.Now.AddDays(-1), ArtistId = "1" };
-            _mockGigs.SetSource(new[] { gig });
+            _mockGigs.SetSource(new List<Gig>{ gig });
 
             var gigs = _repository.GetOpenGigsByArtistID("1");
 

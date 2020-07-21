@@ -1,20 +1,17 @@
-﻿using GigHub.Dtos;
-using GigHub.Interfaces;
+﻿using GigHub.Interfaces;
 using GigHub.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 
 namespace GigHub.Repositories
 {
     public class NotificationRepository : INotificationRepository
     {
-        private readonly ApplicationDbContext _context;
-        public NotificationRepository(ApplicationDbContext database)
+        private readonly IApplicationDbContext _context;
+        public NotificationRepository(IApplicationDbContext context)
         {
-            _context = database;
+            _context = context;
         }
 
         public IEnumerable<Notification> GetNewNotifications(string userId)

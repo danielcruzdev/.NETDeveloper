@@ -7,15 +7,15 @@ namespace GigHub.Repositories
 {
     public class GenreRepository : IGenreRepository
     {
-        private readonly ApplicationDbContext _dataBase;
-        public GenreRepository(ApplicationDbContext database)
+        private readonly ApplicationDbContext _context;
+        public GenreRepository(ApplicationDbContext context)
         {
-            _dataBase = database;
+            _context = context;
         }
 
         public IEnumerable<Genre> GetAllGenres()
         {
-            return _dataBase.Genres.ToList();
+            return _context.Genres.ToList();
         }
     }
 }

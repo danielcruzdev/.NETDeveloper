@@ -11,9 +11,9 @@ namespace GigHub.Repositories
         private readonly ApplicationDbContext _context;
 
 
-        public AttendanceRepository(ApplicationDbContext database)
+        public AttendanceRepository(ApplicationDbContext context)
         {
-            _context = database;
+            _context = context;
 
         }
 
@@ -31,7 +31,7 @@ namespace GigHub.Repositories
                     .Any(a => a.GigId == gigid && a.AttendeeId == userId);
         }
 
-        public Attendance GetAttendanceToDelete(int id, string userId)
+        public Attendance GetAttendance(int id, string userId)
         {
             return _context.Attendances
                 .SingleOrDefault(a => a.AttendeeId == userId && a.GigId == id);
@@ -42,7 +42,7 @@ namespace GigHub.Repositories
             _context.Attendances.Add(attendance);
         }
 
-        public void Remove(Attendance attendance) 
+        public void Remove(Attendance attendance)
         {
             _context.Attendances.Remove(attendance);
         }

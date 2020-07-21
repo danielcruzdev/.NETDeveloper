@@ -11,6 +11,11 @@ namespace GigHub.Models
         {
             User = user ?? throw new ArgumentNullException("Null user!");
             Notification = notification ?? throw new ArgumentNullException("Null notification!");
+
+            User = user;
+            UserID = user.Id;
+            Notification = notification;
+            NotificationId = notification.Id;
         }
 
         public void Read()

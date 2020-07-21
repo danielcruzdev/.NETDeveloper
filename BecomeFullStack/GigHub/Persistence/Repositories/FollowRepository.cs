@@ -14,9 +14,9 @@ namespace GigHub.Repositories
         #pragma warning restore IDE0052 // Remove unread private members
 
 
-        public FollowRepository(ApplicationDbContext database)
+        public FollowRepository(ApplicationDbContext context)
         {
-            _context = database;
+            _context = context;
             _gigRepository = new GigRepository(_context);
 
         }

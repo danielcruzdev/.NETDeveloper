@@ -2,7 +2,6 @@
 using GigHub.Interfaces;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
-using System.Linq;
 using System.Web.Http;
 
 namespace GigHub.Api
@@ -21,8 +20,8 @@ namespace GigHub.Api
         public IHttpActionResult Attend(AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId();
-            var exists = _unitOfWork.Attendance.IsAttending(userId, dto.GigId);
-            if (exists)
+            var exists = _unitOfWork.Attendance.GetAttendance(dto.GigId, userId);
+            if (exists != null)
                 return BadRequest("The attendance already existis!");
 
             var attendance = new Attendance
@@ -41,7 +40,7 @@ namespace GigHub.Api
         public IHttpActionResult Delete(int id)
         {
             var userId = User.Identity.GetUserId();
-            var attendance = _unitOfWork.Attendance.GetAttendanceToDelete(id, userId);
+            var attendance = _unitOfWork.Attendance.GetAttendance(id, userId);
 
             if (attendance == null)
                 return NotFound();

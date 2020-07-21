@@ -9,15 +9,15 @@ namespace GigHub.Repositories
 {
     public class GigRepository : IGigRepository
     {
-        private readonly ApplicationDbContext _dataBase;
-        public GigRepository(ApplicationDbContext database)
+        private readonly IApplicationDbContext _context;
+        public GigRepository(IApplicationDbContext context)
         {
-            _dataBase = database;
+            _context = context;
         }
 
         public IEnumerable<Gig> GetAllGigs()
         {
-            return _dataBase.Gigs
+            return _context.Gigs
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
                 .Where(g => g.DateTime > DateTime.Now);
@@ -25,15 +25,15 @@ namespace GigHub.Repositories
 
         public Gig GetGigWithAttendees(int gigId)
         {
-            return _dataBase.Gigs
+            return _context.Gigs
                 .Include(g => g.Attendances.Select(a => a.Attendee))
                 .SingleOrDefault(g => g.Id == gigId);
         }
 
         public IEnumerable<Gig> GetGigsUserAttending(string userId)
         {
-            return _dataBase.Attendances
-                .Where(g => g.AttendeeId == userId)
+            return _context.Attendances
+                .Where(g => g.AttendeeId == userId && g.Gig.DateTime > DateTime.Now)
                 .Select(g => g.Gig)
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
@@ -42,15 +42,15 @@ namespace GigHub.Repositories
 
         public IEnumerable<Gig> GetOpenGigsByArtistID(string artistId)
         {
-            return _dataBase.Gigs
-                 .Where(g => g.ArtistId == artistId && g.DateTime > DateTime.Now && g.IsCanceled == false)
+            return _context.Gigs
+                 .Where(g => g.ArtistId == artistId && g.DateTime > DateTime.Now && !g.IsCanceled)
                  .Include(g => g.Genre)
                  .ToList();
         }
 
         public Gig GetGigForEdit(int gigId)
         {
-            return _dataBase.Gigs
+            return _context.Gigs
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
                 .SingleOrDefault(g => g.Id == gigId);
@@ -58,7 +58,7 @@ namespace GigHub.Repositories
 
         public Gig GetGigDetails(int id)
         {
-            return _dataBase.Gigs
+            return _context.Gigs
                         .Include(g => g.Artist)
                         .Include(g => g.Genre)
                         .SingleOrDefault(g => g.Id == id);
@@ -66,7 +66,7 @@ namespace GigHub.Repositories
 
         public void Add(Gig gig)
         {
-            _dataBase.Gigs.Add(gig);
+            _context.Gigs.Add(gig);
         }
     }
 }

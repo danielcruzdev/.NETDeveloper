@@ -1,23 +1,23 @@
-﻿using System;
-using System.Web.Http.Results;
-using FluentAssertions;
+﻿using FluentAssertions;
 using GigHub.Api;
 using GigHub.Interfaces;
 using GigHub.Models;
 using GigHub.Tests.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Web.Http.Results;
 
 namespace GigHub.Tests.Controllers.Api
 {
     [TestClass]
     public class GigsControllerTests
     {
-        private readonly Mock<IGigRepository> _mockRepository;
-        private readonly GigsController _controller;
-        private readonly string _userId;
+        private Mock<IGigRepository> _mockRepository;
+        private GigsController _controller;
+        private string _userId;
 
-        public GigsControllerTests()
+        [TestInitialize]
+        public void TestInitialize()
         {
             _mockRepository = new Mock<IGigRepository>();
             var mockUoW = new Mock<IUnitOfWork>();

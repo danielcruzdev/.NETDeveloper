@@ -13,6 +13,10 @@ namespace GigHub.Persistence
         public IFollowRepository Follow { get; private set; }
         public INotificationRepository Notification { get; private set; }
 
+        public IUserNotificationRepository UserNotifications { get; private set; }
+
+        public IApplicationUserRepository Users { get; private set; }
+
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;

@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using GigHub.App_Start;
 using GigHub.Dtos;
 using GigHub.Interfaces;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -35,7 +32,7 @@ namespace GigHub.Api
         public IHttpActionResult MarkRead()
         {
             var userId = User.Identity.GetUserId();
-            var notifications = _unitOfWork.Notification.MarkRead(userId);
+            var notifications = _unitOfWork.UserNotifications.GetUserNotificationsFor(userId);
 
             notifications.ForEach(n => n.Read());
 

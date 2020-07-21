@@ -8,6 +8,7 @@ namespace GigHub.IntegrationTests
         [Test]
         public void TestMethod1()
         {
+
         }
     }
 }

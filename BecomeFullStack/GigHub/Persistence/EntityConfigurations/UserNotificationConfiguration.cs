@@ -3,11 +3,15 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace GigHub.Persistence.EntityConfigurations
 {
-    public class UserNotificationConfiguration : EntityTypeConfiguration<Notification>
+    public class UserNotificationConfiguration : EntityTypeConfiguration<UserNotification>
     {
         public UserNotificationConfiguration()
         {
-            HasRequired(n => n.Gig);
+            HasKey(un => new { un.UserID, un.NotificationId });
+
+            HasRequired(n => n.User)
+                .WithMany(u => u.UserNotifications)
+                .WillCascadeOnDelete(false);
         }
     }
 }
